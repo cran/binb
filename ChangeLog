@@ -1,11 +1,61 @@
+2018-09-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.2
+
+	* README.md: Small edits
+
+2018-09-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* docs/Makefile: Auto-create gif files with correct specs
+
+2018-09-26  Mikko Korpela  <mvkorpel@iki.fi>
+
+	* docs/metropolis_minimal.gif: Recreated with correct use of display
+	* docs/iqss_minimal.gif: Ditto
+	* docs/presento_minimal.gif: Ditto
+
+2018-09-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/presento/skeleton/presento.sty: Tweaks
+	* inst/rmarkdown/templates/presento/skeleton/skeleton.Rmd: Ditto
+
+	* inst/presentoDemo/presento_demo.Rmd: Longer demo
+	* inst/presentoDemo/presento_demo.pdf: Ditto
+
+	* docs/presento_minimal.pdf: Short demo for README
+	* docs/presento_minimal.gif: Ditto
+
+	* docs/metropolis_demo: Adding longer demo
+	* docs/metropolis_iqss: Ditto
+	* docs/metropolis_presento: Ditto
+
+	* README.md: Added presento section, also added three longer demos
+
+2018-09-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/presento/resources/template.tex: Do not
+	set default font feature as presento is scaled up; default to 14pt
+
+2018-09-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Minor release 0.0.1.1
+
+	* R/binb.R: Code and documentation update to support presento
+	* man/metropolis.Rd: Idem
+
+	* inst/rmarkdown/templates/presento/: Added support files for
+	'presento' theme by Ratul Saha translated from LaTeX to RMarkdown
+
 2018-09-19  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Initial release 0.0.1
 
 	* R/binb.R: Expanded manual page
 
-	* inst/demo/iqss/: Move iqss vignette material here as vignette
+	* inst/iqssDemo/: Move iqss vignette material here as vignette
 	processing requires the Libertinus font which may not be present
+
+	* .travis.yml (dist): Added simple Travis CI support
 
 2018-09-18  Dirk Eddelbuettel  <edd@debian.org>
 

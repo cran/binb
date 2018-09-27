@@ -1,19 +1,26 @@
-## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) [![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
 
-Binb is not Beamer: Stylish pdf Presentation from RMarkdown
+Binb is not Beamer: Stylish pdf Presentations from RMarkdown
 
 ### Motivation
 
 The [Beamer](https://github.com/josephwright/beamer) package is very popular for making pdf
-presentation from LaTeX, and also supported from Markdown and
-[RMarkdown](https://github.com/rstudio/rmarkdown). This package provides two custom (LaTeX) themes
-for [Beamer](https://github.com/josephwright/beamer) adapted for RMarkdown use:
+presentations from LaTeX, and also supported from Markdown and
+[RMarkdown](https://github.com/rstudio/rmarkdown). This package (currently)
+provides functionality to use the following custom (LaTeX) themes for
+[Beamer](https://github.com/josephwright/beamer) directly via RMarkdown: 
+
 - [Metropolis](https://github.com/matze/mtheme) (formerly `mtheme`) by Matthias Vogelgesang
+  ([longer demo](https://eddelbuettel.github.io/binb/metropolis_demo.pdf))
 - [IQSS](https://github.com/IQSS/iqss-beamer-theme) by Ista Zahn
+  ([longer demo](https://eddelbuettel.github.io/binb/iqss_demo.pdf))
+- [Presento](https://github.com/RatulSaha/presento) by Ratul Saha
+  ([longer demo](https://eddelbuettel.github.io/binb/presento_demo.pdf))
 
-The original LaTeX styles been converted to be directly useable from [RMarkdown](https://github.com/rstudio/rmarkdown)
+The original LaTeX styles been converted to be directly useable from
+[RMarkdown](https://github.com/rstudio/rmarkdown)
 
-### Example
+### Examples
 
 #### Metropolis
 
@@ -36,8 +43,8 @@ output: binb::metropolis
 Hello, world!
 ````
 
-It creates a [three-page pdf file](https://eddelbuettel.github.io/binb/metropolis_minimal.pdf) which we converted into this 
-animated gif (which loses font crispness, sadly):
+It creates a [three-page pdf file](https://eddelbuettel.github.io/binb/metropolis_minimal.pdf) which
+we converted into this animated gif
 
 ![](https://eddelbuettel.github.io/binb/metropolis_minimal.gif)
 
@@ -74,26 +81,88 @@ Another planet!
 
 ````
 
-This creates this [pdf file](https://eddelbuettel.github.io/binb/iqss_minimal.pdf) which we converted into this 
-animated gif (also losing font crispness):
+This creates this [pdf file](https://eddelbuettel.github.io/binb/iqss_minimal.pdf) which we
+converted into this animated gif:
 
 ![](https://eddelbuettel.github.io/binb/iqss_minimal.gif)
+
+
+#### Presento
+
+The following small example adapted some of the slides from original minimal example from the
+[Presento](https://github.com/RatulSaha/presento) repo:
+
+```{md}
+---
+author: Ratul Saha
+address: www.ratulsaha.com
+title: PRESENTO
+subtitle: clean, simple and extensible
+date: \today
+output: binb::presento
+---
+
+## Presento
+
+- \begin{center}\largetext{The design is \underline{clean}}\end{center}    \bigskip
+- \begin{center}\largetext{The rules are \underline{simple}}\end{center}   \bigskip
+- \item \begin{center}\largetext{The code is \underline{extensible}}\end{center}
+
+
+## Open Source Fonts
+
+-  \montserratfont This is \textsc{Montserrat}	\bigskip
+-  \notosansfont This is \textsc{Noto Sans}		\bigskip
+-  \latolightfont This is Lato (light)          \bigskip
+-  \inconsolatafont This is inconsolata         \bigskip
+-  \textsc{This is Alegreya Sans small caps}    \bigskip
+
+
+## Color Palette
+
+\begin{center}
+  \crule[colordgray] \crule[colorhgray] \crule[colorblue] \crule[colorgreen] \crule[colororange]
+\end{center}
+
+____
+
+\begin{center}
+ \hugetext{BIG BOLD TEXT} 
+ \medskip 
+ \small but background color does not work
+\end{center}
+
+____
+
+\tikz[overlay,remember picture] \node[opacity=0.8, at=(current page.center)]{%
+  \includegraphics[width=\paperwidth]{images/skeleton}};
+\begin{textblock}{7}(7,2.5)
+  {\color{colorblue}\hugetext{\textbf{RUN!}}}
+\end{textblock}
+
+```
+
+From this, one can creats this [pdf file](https://eddelbuettel.github.io/binb/presento_minimal.pdf)
+which can be converted into this animated gif:
+
+![](https://eddelbuettel.github.io/binb/presento_minimal.gif)
 
         
 ### Status
 
-The package is (currently) fairly new and not yet on [CRAN](https://cran.r-project.org/). 
+The package is fairly new and susceptible to change, but on
+[CRAN](https://cran.r-project.org/).
 
 ### Usage 
 
-As the package is not yet CRAN, you must install from GitHub _e.g._ via
+The package is on [CRAN](https://cran.r-project.org/) and can be installed
+via a standard
 
 ```r
-install.packages("remotes")  # if needed
-remotes::install_github("eddelbuettel/binb")
+install.packages("binb")
 ```
 
-to install it from CRAN, and then use as a Markdown template via RStudio, or use code such as
+and can then be used as a Markdown template via RStudio, or via code such as
 
 ```r
 library(rmarkdown)
@@ -102,7 +171,7 @@ setwd("myslides")  ## template creates a new subdir
 render("myslides.Rmd")
 ```
 
-to create a first draft of a new `myslides.Rmd`.        
+to create a first draft of a new `myslides.Rmd`.
 
 Once installed, the above code examples should work as expected.
 
@@ -112,26 +181,40 @@ Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio 
 its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
 
-The [Metropolis](https://github.com/matze/mtheme) LaTeX package is used, but we assume that is is
-installed via TeXLive, MikTeX or another LaTeX bundle. The LaTeX code for the [IQSS Beamer
-Theme](https://github.com/IQSS/iqss-beamer-theme) is included (adapted for
+The [Metropolis](https://github.com/matze/mtheme) LaTeX package is used, but we assume
+that is is installed via TeXLive, MikTeX or another LaTeX bundle. The LaTeX code for the
+[IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) and the [Presento
+Theme](https://github.com/RatulSaha/presento) are included (and adapted for
 [RMarkdown](https://github.com/rstudio/rmarkdown) use).
 
-These themse use additional fonts you may need to install:
+These themes use additional (free) fonts you may need to install:
 
 - [Metropolis](https://github.com/matze/mtheme) wants [Fira Sans](https://github.com/mozilla/Fira)
   but can proceed with alternate fonts;
 - [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) really requires
   [Libertinus](https://github.com/libertinus-fonts/libertinus), see the
   [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme)  page for details.
-  
-If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can use the
-informal font packages I created for [Fira and Fira Sans](https://github.com/eddelbuettel/pkg-fonts-fira)
-and [Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus), respectively.
+- [Presento Theme](https://github.com/RatulSaha/presento) wants 
+  [Montserrat](https://github.com/JulietaUla/Montserrat), 
+  [Lato Light](http://www.latofonts.com/) 
+  (also [here](https://github.com/google/fonts/tree/master/ofl/lato)),
+  [Noto Sans](https://www.google.com/get/noto),
+  [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and 
+  [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
+
+If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can
+use the informal font packages I created for [Fira and Fira
+Sans](https://github.com/eddelbuettel/pkg-fonts-fira),
+[Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus),
+[Montserrat](https://github.com/eddelbuettel/pkg-fonts-montserrat), [Alegreya
+Sans](https://github.com/eddelbuettel/pkg-fonts-alegreya-sans), respectively.
+
+Most modern desktop systems make it easy to install additional fonts as a user. However,
+instructions vary so please see for your particular system.
 
 ### Authors
 
-Dirk Eddelbuettel wrote this package. Ista Zahn authored the included IQSS Beamer Theme.
+Dirk Eddelbuettel and Ista Zahn.
 
 ### License
 
