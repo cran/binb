@@ -8,7 +8,7 @@ The [Beamer](https://github.com/josephwright/beamer) package is very popular for
 presentations from LaTeX, and also supported from Markdown and
 [RMarkdown](https://github.com/rstudio/rmarkdown). This package (currently)
 provides functionality to use the following custom (LaTeX) themes for
-[Beamer](https://github.com/josephwright/beamer) directly via RMarkdown: 
+[Beamer](https://github.com/josephwright/beamer) directly via RMarkdown:
 
 - [Metropolis](https://github.com/matze/mtheme) (formerly `mtheme`) by Matthias Vogelgesang
   ([longer demo](https://eddelbuettel.github.io/binb/metropolis_demo.pdf))
@@ -16,6 +16,7 @@ provides functionality to use the following custom (LaTeX) themes for
   ([longer demo](https://eddelbuettel.github.io/binb/iqss_demo.pdf))
 - [Presento](https://github.com/RatulSaha/presento) by Ratul Saha
   ([longer demo](https://eddelbuettel.github.io/binb/presento_demo.pdf))
+- Monash by Rob J Hyndman
 
 The original LaTeX styles been converted to be directly useable from
 [RMarkdown](https://github.com/rstudio/rmarkdown)
@@ -127,8 +128,8 @@ output: binb::presento
 ____
 
 \begin{center}
- \hugetext{BIG BOLD TEXT} 
- \medskip 
+ \hugetext{BIG BOLD TEXT}
+ \medskip
  \small but background color does not work
 \end{center}
 
@@ -147,13 +148,21 @@ which can be converted into this animated gif:
 
 ![](https://eddelbuettel.github.io/binb/presento_minimal.gif)
 
-        
+### Monash
+
+Below is an example of the [Monash Business School](https://www.monash.edu/business) theme by 
+[Rob Hyndman](https://robjhyndman.com/).  (The source is a little longer [and included in the
+repo](https://github.com/eddelbuettel/binb/blob/master/inst/rmarkdown/templates/monash/skeleton/skeleton.Rmd)
+and package so not shown here.)
+
+![](https://eddelbuettel.github.io/binb/monash_minimal.gif)
+
 ### Status
 
 The package is fairly new and susceptible to change, but on
 [CRAN](https://cran.r-project.org/).
 
-### Usage 
+### Usage
 
 The package is on [CRAN](https://cran.r-project.org/) and can be installed
 via a standard
@@ -191,16 +200,18 @@ These themes use additional (free) fonts you may need to install:
 
 - [Metropolis](https://github.com/matze/mtheme) wants [Fira Sans](https://github.com/mozilla/Fira)
   but can proceed with alternate fonts;
-- [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) really requires
+- [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) wants
   [Libertinus](https://github.com/libertinus-fonts/libertinus), see the
   [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme)  page for details.
-- [Presento Theme](https://github.com/RatulSaha/presento) wants 
-  [Montserrat](https://github.com/JulietaUla/Montserrat), 
-  [Lato Light](http://www.latofonts.com/) 
+- [Presento Theme](https://github.com/RatulSaha/presento) wants
+  [Montserrat](https://github.com/JulietaUla/Montserrat),
+  [Lato Light](http://www.latofonts.com/)
   (also [here](https://github.com/google/fonts/tree/master/ofl/lato)),
   [Noto Sans](https://www.google.com/get/noto),
-  [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and 
+  [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and
   [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
+- Monash wants the [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such Ubuntu) 
+  provide.
 
 If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can
 use the informal font packages I created for [Fira and Fira
@@ -214,8 +225,8 @@ instructions vary so please see for your particular system.
 
 ### Authors
 
-Dirk Eddelbuettel and Ista Zahn.
+Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
 
 ### License
 
-GPL-2 for this package.
+GPL (>= 2) for this package.

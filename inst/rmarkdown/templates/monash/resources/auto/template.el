@@ -2,7 +2,7 @@
  "template"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("$documentclass$" "$if(fontsize)$$fontsize$" "$endif$$if(lang)$$babel-lang$" "$endif$$if(handout)$handout" "$endif$$if(colorlinks)$dvipsnames" "$endif$$if(beamer)$ignorenonframetext" "$endif$$for(classoption)$$classoption$$sep$" "$endfor$")))
+                     '(("$documentclass$" "$if(fontsize)$$fontsize$" "$else$14pt" "$endif$$if(lang)$$babel-lang$" "$endif$$if(handout)$handout" "$endif$$if(colorlinks)$dvipsnames" "$endif$$if(beamer)$ignorenonframetext" "$endif$$for(classoption)$$classoption$$sep$" "$endfor$")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("$fontfamily$" "$for(fontfamilyoptions)$$fontfamilyoptions$$sep$" "$endfor$") ("fontenc" "$if(fontenc)$$fontenc$$else$T1$endif$") ("inputenc" "utf8") ("babel" "shorthands=off" "$for(babel-otherlangs)$$babel-otherlangs$" "$endfor$main=$babel-lang$") ("natbib" "round") ("biblatex" "$if(biblio-style)$style=$biblio-style$" "$endif$$for(biblatexoptions)$$biblatexoptions$$sep$" "$endfor$") ("ulem" "normalem") ("bidi" "RTLdocument")))
    (add-to-list 'LaTeX-verbatim-environments-local "lstlisting")

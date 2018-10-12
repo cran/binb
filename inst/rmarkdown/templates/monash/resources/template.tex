@@ -1,6 +1,6 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(handout)$handout,$endif$$if(colorlinks)$dvipsnames,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$else$14pt,$endif$$if(lang)$$babel-lang$,$endif$$if(handout)$handout,$endif$$if(colorlinks)$dvipsnames,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
@@ -10,8 +10,7 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
-\usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -48,9 +47,9 @@ $if(monofont)$
   \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
 $endif$
 
-%$if(mathfont)$
-%  \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-%$endif$
+$if(mathfont)$
+  \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+$endif$
 
 $if(CJKmainfont)$
   \usepackage{xeCJK}
@@ -68,6 +67,11 @@ $endif$
 
 $if(fonttheme)$
   \usefonttheme{$fonttheme$}
+$endif$
+
+% A default size of 24 is set in beamerthememonash.sty
+$if(titlefontsize)$
+  \setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{$titlefontsize$}{32}}
 $endif$
 
 $if(mainfont)$
@@ -249,32 +253,20 @@ $for(header-includes)$
   $header-includes$
 $endfor$
 
-%% IQSS overrides
-\iqsssectiontitle{Outline}
-
+%% Monash overrides
+$if(toc)$
 \AtBeginSection[]{
-  \title{\insertsectionhead}
-  {
-    \definecolor{white}{rgb}{0.776,0.357,0.157}
-    \definecolor{iqss@orange}{rgb}{1,1,1}
-    \ifnum \insertmainframenumber > \insertframenumber
-    \frame{
-      \frametitle{\iqsssectiontitleheader}
-      \tableofcontents[currentsection]
-    }
-    \else
-    \frame{
-      \frametitle{Backup Slides}
-      \tableofcontents[sectionstyle=shaded/shaded,subsectionstyle=shaded/shaded/shaded]
-    }
-    \fi
-  }
-}
-
-\AtBeginSubsection[]{}
-
-%% 
-
+   \frame<beamer>{
+   \frametitle{Outline}
+   \tableofcontents[currentsection,hideallsubsections]
+  }}
+$endif$
+% Redefine shaded environment if it exists (to ensure text is black)
+\ifcsname Shaded\endcsname
+  \definecolor{shadecolor}{RGB}{225,225,225}
+  \renewenvironment{Shaded}{\color{black}\begin{snugshade}\color{black}}{\end{snugshade}}
+\fi
+%%
 
 $if(title)$
   \title[$shorttitle$]{$title$}
@@ -282,10 +274,6 @@ $endif$
 
 $if(subtitle)$
   \subtitle{$subtitle$}
-$endif$
-
-$if(titlegraphic)$
-  \titlegraphic{\includegraphics{$titlegraphic$}}
 $endif$
 
 $if(author)$
@@ -345,9 +333,10 @@ $for(include-before)$
 $endfor$
 
 $if(toc)$
-  \begin{frame}
-  \tableofcontents[hideallsubsections]
-  \end{frame}
+   \frame<beamer>{
+   \frametitle{Outline}
+   \tableofcontents[hideallsubsections]
+  }
 $endif$
 
 $body$
