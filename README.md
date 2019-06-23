@@ -1,4 +1,4 @@
-## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) [![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
+## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) [![Dependencies](https://tinyverse.netlify.com/badge/binb)](https://cran.r-project.org/package=binb) [![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
 
 Binb is not Beamer: Stylish pdf Presentations from RMarkdown
 
@@ -16,7 +16,7 @@ provides functionality to use the following custom (LaTeX) themes for
   ([longer demo](https://eddelbuettel.github.io/binb/iqss_demo.pdf))
 - [Presento](https://github.com/RatulSaha/presento) by Ratul Saha
   ([longer demo](https://eddelbuettel.github.io/binb/presento_demo.pdf))
-- Monash by Rob J Hyndman
+- [Monash](https://github.com/robjhyndman/MonashEBSTemplates) by Rob J Hyndman
 
 The original LaTeX styles been converted to be directly useable from
 [RMarkdown](https://github.com/rstudio/rmarkdown)
@@ -210,7 +210,7 @@ These themes use additional (free) fonts you may need to install:
   [Noto Sans](https://www.google.com/get/noto),
   [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and
   [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
-- Monash wants the [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such Ubuntu) 
+- [Monash](https://github.com/robjhyndman/MonashEBSTemplates) wants [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such as Ubuntu) 
   provide.
 
 If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can

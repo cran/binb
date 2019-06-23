@@ -1,8 +1,8 @@
 Package: binb
 Type: Package
 Title: 'binb' is not 'Beamer'
-Version: 0.0.3
-Date: 2018-10-12
+Version: 0.0.4
+Date: 2019-06-23
 Author: Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
@@ -18,8 +18,8 @@ Imports: rmarkdown, knitr
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2018-10-12 11:12:20.635922 UTC; edd
+Packaged: 2019-06-23 15:42:05.37931 UTC; edd
 Repository: CRAN
-Date/Publication: 2018-10-12 12:30:03 UTC
+Date/Publication: 2019-06-24 12:44:52
