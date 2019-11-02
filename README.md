@@ -17,6 +17,8 @@ provides functionality to use the following custom (LaTeX) themes for
 - [Presento](https://github.com/RatulSaha/presento) by Ratul Saha
   ([longer demo](https://eddelbuettel.github.io/binb/presento_demo.pdf))
 - [Monash](https://github.com/robjhyndman/MonashEBSTemplates) by Rob J Hyndman
+  (longer demos [one](https://eddelbuettel.github.io/binb/monashDemo.pdf) and
+  [two](https://eddelbuettel.github.io/binb/monashOptions.pdf))
 
 The original LaTeX styles been converted to be directly useable from
 [RMarkdown](https://github.com/rstudio/rmarkdown)
@@ -150,8 +152,12 @@ which can be converted into this animated gif:
 
 ### Monash
 
-Below is an example of the [Monash Business School](https://www.monash.edu/business) theme by 
-[Rob Hyndman](https://robjhyndman.com/).  (The source is a little longer [and included in the
+Below is an example of the [Monash Business School](https://www.monash.edu/business) theme
+by [Rob Hyndman](https://robjhyndman.com/). There also two longer Monash demos included in the
+package: [longer demo](https://eddelbuettel.github.io/binb/monashDemo.pdf) and [options
+demo](https://eddelbuettel.github.io/binb/monashOptions.pdf).
+
+(The source is a little longer [and included in the
 repo](https://github.com/eddelbuettel/binb/blob/master/inst/rmarkdown/templates/monash/skeleton/skeleton.Rmd)
 and package so not shown here.)
 
@@ -222,6 +228,14 @@ Sans](https://github.com/eddelbuettel/pkg-fonts-alegreya-sans), respectively.
 
 Most modern desktop systems make it easy to install additional fonts as a user. However,
 instructions vary so please see for your particular system.
+
+### See Also
+
+- [linl](https://github.com/eddelbuettel/linl): Linl is not Letter: LaTeX letters from RMarkdown
+- [pinp](https://github.com/eddelbuettel/pinp): Pinp is not PNAS: Snazzy one-or two column short papers or vignettes 
+- [tint](https://github.com/eddelbuettel/tint): tint is not tufte: Beautiful pdf or html handout or writeups
+
+and the [minm](https://github.com/eddelbuettel/minm) package installing all of them.
 
 ### Authors
 
