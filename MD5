@@ -1,13 +1,13 @@
-0d425787243f218ac8df1879226d977b *ChangeLog
-6996b5d0e97110acb557444594678c4e *DESCRIPTION
-e304ccd5e0b36e88eb978b6429835137 *NAMESPACE
+5388464aeccbcdaa45f8f767a18c0523 *ChangeLog
+bca4930837112c598fd1e7a8356a1de5 *DESCRIPTION
+4d3c8373f81c9777b2ed235f07b97c9a *NAMESPACE
 5d38fb8116c77e683893e2b352eafdc5 *R/binb.R
-1305557c0648130de3757b131fc8f03b *README.md
-aa2091ede937b5686af1d28bf421a042 *build/vignette.rds
+6825c4ff60df5ae04f0ddb1cae7df40b *README.md
+9ff7c1f6fe12a574c68279821f52a70e *build/vignette.rds
 f79a6f6fb3d935a28ad86794eba8687c *inst/NEWS.Rd
 c9d91e778d25104240d3aff69312d383 *inst/doc/metropolisDemo.R
-daab090dad15d495ea28c67bbd1a950f *inst/doc/metropolisDemo.Rmd
-6e45d80dd94e716e8425070b650b06dc *inst/doc/metropolisDemo.pdf
+161a0d7d0ad5125d7c193d138c445b56 *inst/doc/metropolisDemo.Rmd
+57c3c7fb89768d3a31c985d81e7dc3a5 *inst/doc/metropolisDemo.pdf
 ca95050dabf7c3a79751b8c61cd62200 *inst/iqssDemo/beamercolorthemeiqss.sty
 c646cc632d5f82dd4130adb4b399a6ab *inst/iqssDemo/beamerfontthemeiqss.sty
 8a9f5205ae9a4eae5f7f7796beac406e *inst/iqssDemo/beamerthemeiqss.sty
@@ -32,7 +32,7 @@ c646cc632d5f82dd4130adb4b399a6ab *inst/rmarkdown/templates/iqss/skeleton/beamerf
 adde1306cf6b60d6b52b2fc852f19817 *inst/rmarkdown/templates/iqss/skeleton/header.png
 9b7ab13295b0513270c2aecabe795807 *inst/rmarkdown/templates/iqss/skeleton/skeleton.Rmd
 2e1baa0ae49801954d690747187f8609 *inst/rmarkdown/templates/iqss/template.yaml
-0ef175299a53037b5b934708409b5a5d *inst/rmarkdown/templates/metropolis/resources/template.tex
+6edddcb74c6ac1920c431cfec8caf5e5 *inst/rmarkdown/templates/metropolis/resources/template.tex
 a049839a1aea9fa97cd6488389ed623b *inst/rmarkdown/templates/metropolis/skeleton/skeleton.Rmd
 d605564449627c5f131da5870c7b1691 *inst/rmarkdown/templates/metropolis/template.yaml
 62cf4e691ff3f245761ea855be65dc58 *inst/rmarkdown/templates/monash/resources/template.tex
@@ -43,7 +43,6 @@ fbde8c9e6d990a921423b59ad244b5ef *inst/rmarkdown/templates/monash/skeleton/beame
 c3baf92e3b2d89eb8259852937c17199 *inst/rmarkdown/templates/monash/skeleton/skeleton.Rmd
 fa20b258f376c0bdd16448046b6e5c5c *inst/rmarkdown/templates/monash/skeleton/titlepage.png
 dc038a988811655373c7e7373324737d *inst/rmarkdown/templates/monash/template.yaml
-2b8c4b78536e23e8e18e18f958d43517 *inst/rmarkdown/templates/presento/resources/auto/template.el
 65d4fa24189a73ae45ecefb9f53e5385 *inst/rmarkdown/templates/presento/resources/template.tex
 99eceda9f8dd34499ba9c41c7f4f17f9 *inst/rmarkdown/templates/presento/skeleton/images/skeleton.jpg
 bbdfd98b5ccfdc0d573f483d09ec62df *inst/rmarkdown/templates/presento/skeleton/presento.sty
@@ -52,4 +51,4 @@ bbdfd98b5ccfdc0d573f483d09ec62df *inst/rmarkdown/templates/presento/skeleton/pre
 648d1874358d22c1fc4cc6c82e9e6f1b *man/metropolis.Rd
 1d3de2064f913c4061894ff7d7190966 *vignettes/metropolis/demo.bib
 bf0297e8b40b9af253e36e631d748a7e *vignettes/metropolis/header.tex
-daab090dad15d495ea28c67bbd1a950f *vignettes/metropolisDemo.Rmd
+161a0d7d0ad5125d7c193d138c445b56 *vignettes/metropolisDemo.Rmd

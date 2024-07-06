@@ -1,8 +1,8 @@
 Package: binb
 Type: Package
 Title: 'binb' is not 'Beamer'
-Version: 0.0.6
-Date: 2020-06-10
+Version: 0.0.7
+Date: 2024-07-06
 Author: Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
@@ -12,14 +12,15 @@ Description: A collection of 'LaTeX' styles using 'Beamer' customization for
  'IQSS' by Ista Zahn (which is included here), and the 'Monash' theme by
  Rob J Hyndman. Additional (free) fonts may be needed: 'Metropolis' prefers
  'Fira', and 'IQSS' requires 'Libertinus'.
-URL: https://github.com/eddelbuettel/binb
+URL: https://github.com/eddelbuettel/binb,
+        https://dirk.eddelbuettel.com/code/binb.html
 BugReports: https://github.com/eddelbuettel/binb/issues
-Imports: rmarkdown, knitr
+Imports: rmarkdown, knitr, codetools
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Encoding: UTF-8
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2020-06-10 11:03:23.447875 UTC; edd
+Packaged: 2024-07-06 11:29:51 UTC; edd
 Repository: CRAN
-Date/Publication: 2020-06-10 20:50:02 UTC
+Date/Publication: 2024-07-06 15:12:06 UTC
